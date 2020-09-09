@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;	
+	font-family: "arial", sans-serif;
+}
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 70px;
+	background: #60a3bc;
+	padding: 0 20px;
+	color: #eaeaea;
+}
+
+.nama {
+	line-height: 70px;
+	float: left;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.menu {
+	float: right;
+	line-height: 70px;
+}
+
+.menu a{
+	font-family: tw cen mt,sans-serif;
+	color: #eaeaea;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 10px;
+	transition: 0.4s;
+	font-weight: bold;
+}
+
+.menu span {
+	margin-right: 4px;
+}
+
+.showmenubtn,.hidemenubtn {
+	transition: 0.4s;
+	font-size: 22px;
+	cursor: pointer;
+	display: none;
+}
+.showmenubtn{
+	float: right;
+}
+
+.showmenubtn i{
+	line-height: 75px;
+}
+
+.menu a:hover,
+.hidemenubtn:hover {
+	color: #3498db;
+}
+
+.showmenubtn:hover {
+	color: #2c3e50;
+}
+
+#cb {
+	position: absolute;
+	visibility: hidden;
+	z-index: -1111;
+}
+
+.content {
+	padding: 0 20px;
+}
+
+.content h1 {
+	margin-top: 115px;
+	margin-bottom: 15px;
+}
+
+.content img {
+	width: 100%;
+	max-width: 700px;
+	margin: 20px 0;
+}
+
+.content p {
+	text-align: justify;
+}
+
+@media screen and (max-width: 800px) {
+	.showmenubtn,.hidemenubtn {
+		display: block;
+	}
+	.menu {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #333;
+		right: -108%;
+		top: 0;
+		text-align: center;
+		padding: 80px 0;
+		line-height: normal;
+		transition: 0.7s;
+	}
+	.menu a{
+		display: block;
+		padding: 15px;
+	}
+
+	.hidemenubtn {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+
+	#cb:checked ~ .menu {
+		right: 0;
+	}
+}
+
+.garis {
+	padding: 0 20px;
+}
+
+.footer{
+	background-color: #34495e;
+	padding: 25px;
+	margin-bottom: 0;
+}
+
+.footer .copy{
+	font-size: 10px;
+	text-align: center;
+	color: #eaeaea;
+}
+
+.footer .copy:hover{
+	color: #eaeaea;
+}
